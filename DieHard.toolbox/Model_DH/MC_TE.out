@@ -2,7 +2,7 @@
 TLC2 Version 2.13 of 18 July 2018
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with seed -5240434135195819057 with 2 workers on 4 cores with 994MB heap and 1984MB offheap memory (Linux 4.15.0-47-generic amd64, Oracle Corporation 10.0.2 x86_64).
+Running breadth-first search Model-Checking with seed 8269795792415226409 with 2 workers on 4 cores with 994MB heap and 1984MB offheap memory (Linux 4.15.0-47-generic amd64, Oracle Corporation 10.0.2 x86_64).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -25,7 +25,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2019-04-17 17:32:49)
+Starting... (2019-04-17 21:54:55)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -33,79 +33,116 @@ Computing initial states...
 @!@!@STARTMSG 2190:0 @!@!@
 Finished computing initial states: 1 distinct state generated.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 2193:0 @!@!@
-Model checking completed. No error has been found.
-  Estimates of the probability that TLC did not check all reachable states
-  because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 7.0E-17
-  based on the actual fingerprints:  val = 3.7E-18
-@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 1000:1 @!@!@
+TLC threw an unexpected exception.
+This was probably caused by an error in the spec or model.
+See the User Output or TLC Console for clues to what happened.
+The exception was a java.lang.RuntimeException
+: @!@!@STARTMSG 2280:0 @!@!@
+In evaluation, the identifier big is either undefined or not an operator.
+line 27, col 42 to line 27, col 44 of module DieHard
+@!@!@ENDMSG 2280 @!@!@
+@!@!@ENDMSG 1000 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ big = 0
+/\ small = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <FillSmall line 12, col 14 to line 13, col 28 of module DieHard>
+/\ big = 0
+/\ small = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <FillBig line 15, col 12 to line 16, col 28 of module DieHard>
+/\ big = 5
+/\ small = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 24, column 15 to line 28, column 33 in DieHard
+1. Line 27, column 21 to line 28, column 33 in DieHard
+2. Line 27, column 24 to line 27, column 52 in DieHard
+3. Line 27, column 33 to line 27, column 52 in DieHard
+4. Line 27, column 42 to line 27, column 51 in DieHard
+5. Line 27, column 42 to line 27, column 45 in DieHard
+6. Line 27, column 42 to line 27, column 44 in DieHard
+
+
+@!@!@ENDMSG 2103 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2019-04-17 17:32:57
+The coverage statistics at 2019-04-17 21:54:56
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 12, col 17 to line 12, col 26 of module DieHard: 16
+  line 12, col 17 to line 12, col 26 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 13, col 17 to line 13, col 28 of module DieHard: 16
+  line 13, col 17 to line 13, col 28 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 15, col 15 to line 15, col 24 of module DieHard: 16
+  line 15, col 15 to line 15, col 24 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 16, col 15 to line 16, col 28 of module DieHard: 16
+  line 16, col 15 to line 16, col 28 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 18, col 18 to line 18, col 27 of module DieHard: 16
+  line 18, col 18 to line 18, col 27 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 19, col 18 to line 19, col 29 of module DieHard: 16
+  line 19, col 18 to line 19, col 29 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 21, col 16 to line 21, col 25 of module DieHard: 16
+  line 21, col 16 to line 21, col 25 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 22, col 16 to line 22, col 29 of module DieHard: 16
+  line 22, col 16 to line 22, col 29 of module DieHard: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 25, col 24 to line 25, col 43 of module DieHard: 11
+  line 25, col 24 to line 25, col 43 of module DieHard: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 26, col 24 to line 26, col 33 of module DieHard: 11
+  line 26, col 24 to line 26, col 33 of module DieHard: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 27, col 24 to line 27, col 33 of module DieHard: 5
+  line 27, col 24 to line 27, col 52 of module DieHard: 0
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 28, col 24 to line 28, col 49 of module DieHard: 5
+  line 28, col 24 to line 28, col 33 of module DieHard: 0
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 31, col 24 to line 31, col 33 of module DieHard: 7
+  line 32, col 24 to line 32, col 33 of module DieHard: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 24 to line 32, col 43 of module DieHard: 7
+  line 33, col 24 to line 33, col 43 of module DieHard: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 24 to line 33, col 49 of module DieHard: 9
+  line 34, col 24 to line 34, col 49 of module DieHard: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 24 to line 34, col 33 of module DieHard: 9
+  line 35, col 24 to line 35, col 33 of module DieHard: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(10) at 2019-04-17 17:32:57: 97 states generated (722 s/min), 16 distinct states found (119 ds/min), 0 states left on queue.
+Progress(4) at 2019-04-17 21:54:56: 35 states generated (2,473 s/min), 8 distinct states found (565 ds/min), 2 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-97 states generated, 16 distinct states found, 0 states left on queue.
+35 states generated, 8 distinct states found, 2 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 10.
+The depth of the complete state graph search is 4.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+The average outdegree of the complete state graph is 1 (minimum is 1, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 8826ms at (2019-04-17 17:32:57)
+Finished in 1903ms at (2019-04-17 21:54:56)
 @!@!@ENDMSG 2186 @!@!@

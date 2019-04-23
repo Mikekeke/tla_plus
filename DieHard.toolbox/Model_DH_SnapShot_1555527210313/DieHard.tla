@@ -24,9 +24,8 @@ EmptyBig == /\ big'   = 0
 SmallToBig == IF big + small =< 5
                THEN /\ big'   = big + small
                     /\ small' = 0
-               ELSE /\ small' = small - (big' - big)
-                    /\ big'   = 5
-                    
+               ELSE /\ big'   = 5
+                    /\ small' = small - (big' - big)
 
 BigToSmall == IF big + small =< 3
                THEN /\ big'   = 0 
