@@ -1,0 +1,158 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.13 of 18 July 2018
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with seed -678005310327626850 with 2 workers on 4 cores with 994MB heap and 1984MB offheap memory (Linux 4.15.0-47-generic amd64, Oracle Corporation 10.0.2 x86_64).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/mike/dev/projects/tla_plus/book/wire.toolbox/Model_wire/MC.tla
+Parsing file /home/mike/dev/projects/tla_plus/book/wire.toolbox/Model_wire/wire.tla
+Parsing file /home/mike/dev/programs/toolbox/plugins/org.lamport.tlatools_1.0.0.201807180447/tla2sany/StandardModules/TLC.tla
+Parsing file /home/mike/dev/programs/toolbox/plugins/org.lamport.tlatools_1.0.0.201807180447/tla2sany/StandardModules/Integers.tla
+Parsing file /home/mike/dev/programs/toolbox/plugins/org.lamport.tlatools_1.0.0.201807180447/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/mike/dev/programs/toolbox/plugins/org.lamport.tlatools_1.0.0.201807180447/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/mike/dev/programs/toolbox/plugins/org.lamport.tlatools_1.0.0.201807180447/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module wire
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2019-05-03 19:28:50)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 25 distinct states generated.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_15569009295629000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ people = {"alice", "bob"}
+/\ sender = <<"alice", "alice">>
+/\ receiver = <<"bob", "bob">>
+/\ acc = [alice |-> 5, bob |-> 5]
+/\ amount = <<1, 5>>
+/\ pc = <<"Withdraw", "Withdraw">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Withdraw line 48, col 19 to line 51, col 69 of module wire>
+/\ people = {"alice", "bob"}
+/\ sender = <<"alice", "alice">>
+/\ receiver = <<"bob", "bob">>
+/\ acc = [alice |-> 4, bob |-> 5]
+/\ amount = <<1, 5>>
+/\ pc = <<"Deposit", "Withdraw">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Withdraw line 48, col 19 to line 51, col 69 of module wire>
+/\ people = {"alice", "bob"}
+/\ sender = <<"alice", "alice">>
+/\ receiver = <<"bob", "bob">>
+/\ acc = [alice |-> -1, bob |-> 5]
+/\ amount = <<1, 5>>
+/\ pc = <<"Deposit", "Deposit">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2019-05-03 19:28:51
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 12 to line 35, col 17 of module wire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 20 to line 35, col 22 of module wire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 25 to line 35, col 26 of module wire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 29 to line 35, col 34 of module wire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 37 to line 35, col 44 of module wire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 47 to line 35, col 52 of module wire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 22 to line 49, col 91 of module wire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 22 to line 50, col 58 of module wire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 35 to line 51, col 40 of module wire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 43 to line 51, col 48 of module wire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 51 to line 51, col 58 of module wire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 61 to line 51, col 66 of module wire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 21 to line 54, col 94 of module wire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 21 to line 55, col 54 of module wire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 34 to line 56, col 39 of module wire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 42 to line 56, col 47 of module wire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 50 to line 56, col 57 of module wire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 60 to line 56, col 65 of module wire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(3) at 2019-05-03 19:28:51: 103 states generated (6,377 s/min), 97 distinct states found (6,006 ds/min), 57 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+103 states generated, 97 distinct states found, 57 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 3.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 2 (minimum is 1, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1639ms at (2019-05-03 19:28:51)
+@!@!@ENDMSG 2186 @!@!@
