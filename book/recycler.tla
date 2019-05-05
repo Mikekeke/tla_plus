@@ -17,6 +17,7 @@ variables
     item = [type: {"trash", "recycle"}, size: 1..6],
     items \in item \X item \X item \X item, \* set of tuple-4 of items (all possible combinations in tuple-4)
     curr = ""; \* helper: current item
+    
 macro add_item(type) begin
   bins[type] := Append(bins[type], curr);
   capacity[type] := capacity[type] - curr.size;
@@ -70,11 +71,11 @@ Lbl_1 == /\ pc = "Lbl_1"
                                                           count >>
                     /\ pc' = "Lbl_1"
                ELSE /\ Assert(capacity.trash >= 0 /\ capacity.recycle >= 0, 
-                              "Failure of assertion at line 37, column 6.")
-                    /\ Assert(Len(bins.trash) = count.trash, 
                               "Failure of assertion at line 38, column 6.")
-                    /\ Assert(Len(bins.recycle) = count.recycle, 
+                    /\ Assert(Len(bins.trash) = count.trash, 
                               "Failure of assertion at line 39, column 6.")
+                    /\ Assert(Len(bins.recycle) = count.recycle, 
+                              "Failure of assertion at line 40, column 6.")
                     /\ pc' = "Done"
                     /\ UNCHANGED << capacity, bins, count, items, curr >>
          /\ item' = item
