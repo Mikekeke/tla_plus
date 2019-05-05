@@ -22,6 +22,7 @@ macro add_item(type) begin
   capacity[type] := capacity[type] - curr.size;
   count[type] := count[type] + 1;
 end macro;
+
 begin
     while items /= <<>> do
         curr := Head(items);
@@ -69,11 +70,11 @@ Lbl_1 == /\ pc = "Lbl_1"
                                                           count >>
                     /\ pc' = "Lbl_1"
                ELSE /\ Assert(capacity.trash >= 0 /\ capacity.recycle >= 0, 
-                              "Failure of assertion at line 36, column 6.")
-                    /\ Assert(Len(bins.trash) = count.trash, 
                               "Failure of assertion at line 37, column 6.")
-                    /\ Assert(Len(bins.recycle) = count.recycle, 
+                    /\ Assert(Len(bins.trash) = count.trash, 
                               "Failure of assertion at line 38, column 6.")
+                    /\ Assert(Len(bins.recycle) = count.recycle, 
+                              "Failure of assertion at line 39, column 6.")
                     /\ pc' = "Done"
                     /\ UNCHANGED << capacity, bins, count, items, curr >>
          /\ item' = item
